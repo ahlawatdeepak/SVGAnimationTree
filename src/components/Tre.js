@@ -61,7 +61,9 @@ const Tree = () => {
     const mainBranch = draw.group().translate(canvasWidth / 2, canvasHeight);
 
     branch(mainBranch, 150);
-    // return()=>{draw.clear()}
+    return () => {
+      draw.clear();
+    };
   }, []);
 
   return (
