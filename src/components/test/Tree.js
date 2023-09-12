@@ -11,10 +11,9 @@ const Tree = () => {
 
     const draw = SVG().addTo(svgRef.current);
     draw.size("100%", "100%");
-
     function branch(parent, len) {
       const strokeWidth = len > 25 ? (len - 25) / 18 : 0.2;
-      const line = parent.line(0, 0, 0, -len).stroke({ width: strokeWidth, color: "Brown" });
+      const line = parent.line(0, 0, 0, -len).stroke({ width: strokeWidth, color: "Gray" });
 
       if (len >= 25) {
         const leftBranch = parent.group();
