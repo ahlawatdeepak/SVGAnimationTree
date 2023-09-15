@@ -64,7 +64,7 @@ const Tree = () => {
     return () => {
       draw.clear();
     };
-  }, []);
+  }, [angle]);
 
   return (
     <>
