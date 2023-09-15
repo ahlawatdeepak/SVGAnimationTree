@@ -38,14 +38,17 @@ const Tree = () => {
         branch(rightLine, len * 0.65),
       ]);
     } else {
-      const r = Math.floor(Math.random() * 255);
-      const g = Math.floor(Math.random() * 255);
-      const b = Math.floor(Math.random() * 255);
-      const x = "rgb(" + r + "," + g + "," + b + ")";
+      // parent1.polygon([ [0, 0], [-5, -10], [5, -10],)fill("green");
       parent
-        .circle(strokeWidth + 5)
-        .center(0, 0 - len)
-        .fill(x);
+        .polygon([
+          [0, 0], // Center of the flower
+          [-5, -10], // Left petal point
+          [-5, -20], // Left petal point
+          [0, -30], // Bottom petal point
+          [5, -20], // Right petal point
+          [5, -10], // Right petal point
+        ])
+        .fill("pink");
     }
   }
 
